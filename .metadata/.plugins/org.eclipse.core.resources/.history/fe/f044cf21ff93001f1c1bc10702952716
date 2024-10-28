@@ -1,0 +1,55 @@
+/*
+ * button3.c
+ *
+ *  Created on: Oct 27, 2024
+ *      Author: datph
+ */
+#include <button3.h>
+
+int KeyReg0Button3 = NORMAL_STATE;
+int KeyReg1Button3 = NORMAL_STATE;
+int KeyReg2Button3 = NORMAL_STATE;
+int KeyReg3Button3 = NORMAL_STATE;
+
+int TimerForKeyPressButton3 = 200;
+int button3_flag = 0;
+
+int isButton3Pressed() {
+	if(button3_flag == 1) {
+		button3_flag = 0;
+		return 1;
+	}
+	return 0;
+}
+
+void subKeyProcessButton3(){
+	button3_flag = 1;
+}
+
+void getKeyInputButton3() {
+	KeyReg0Button3 = KeyReg1Button3;
+	KeyReg1Button3 = KeyReg2Button3;
+	KeyReg2Button3 = HAL_GPIO_ReadPin(BUTTON_3_GPIO_Port, BUTTON_3_Pin);
+
+	if ((KeyReg0 == KeyReg1) && (KeyReg1 == KeyReg2)) {
+		if (KeyReg3 != KeyReg2) {
+			KeyReg3 = KeyReg2;
+			if (KeyReg2 == PRESSED_STATE) {
+				// TODO
+				subKeyProcess();
+				TimerForKeyPress = 200;
+			}
+		}
+		else {
+			TimerForKeyPress--;
+			if (TimerForKeyPress == 0) {
+				//TODO
+				if (KeyReg2 == PRESSED_STATE) {
+					KeyReg3 = NORMAL_STATE;
+				}
+			}
+		}
+	}
+}
+
+

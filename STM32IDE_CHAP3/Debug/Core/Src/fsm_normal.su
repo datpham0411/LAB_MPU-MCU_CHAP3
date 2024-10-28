@@ -1,0 +1,4 @@
+fsm_normal.c:11:6:select_num	32	static
+fsm_normal.c:136:6:display_num	24	static
+fsm_normal.c:159:6:display_time	8	static
+fsm_normal.c:170:6:fsm_normal_run	24	static

@@ -1,0 +1,24 @@
+14:09:16 **** Incremental Build of configuration Debug for project STM32IDE_CHAP3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_normal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_normal.d" -MT"Core/Src/fsm_normal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_normal.o"
+arm-none-eabi-gcc "../Core/Src/fsm_traffic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_traffic.d" -MT"Core/Src/fsm_traffic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_traffic.o"
+arm-none-eabi-gcc -o "STM32IDE_CHAP3.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\datph\STM32CubeIDE\workspace_1.7.0\CHAP3\STM32IDE_CHAP3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32IDE_CHAP3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32IDE_CHAP3.elf
+ 
+arm-none-eabi-size   STM32IDE_CHAP3.elf 
+arm-none-eabi-objdump -h -S  STM32IDE_CHAP3.elf  > "STM32IDE_CHAP3.list"
+arm-none-eabi-objcopy  -O ihex  STM32IDE_CHAP3.elf  "STM32IDE_CHAP3.hex"
+   text	   data	    bss	    dec	    hex	filename
+  13504	    104	   1696	  15304	   3bc8	STM32IDE_CHAP3.elf
+arm-none-eabi-objcopy  -O binary  STM32IDE_CHAP3.elf  "STM32IDE_CHAP3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: STM32IDE_CHAP3.hex
+Finished building: STM32IDE_CHAP3.bin
+ 
+ 
+Finished building: STM32IDE_CHAP3.list
+ 
+
+14:09:16 Build Finished. 0 errors, 0 warnings. (took 743ms)
+

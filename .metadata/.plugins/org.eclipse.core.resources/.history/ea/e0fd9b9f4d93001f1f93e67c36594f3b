@@ -1,0 +1,20 @@
+/*
+ * fsm_normal.h
+ *
+ *  Created on: Oct 26, 2024
+ *      Author: datph
+ */
+
+#ifndef INC_FSM_NORMAL_H_
+#define INC_FSM_NORMAL_H_
+
+#include "main.h"
+
+extern int color;
+
+#define INIT 0
+#define RED 1
+#define AMBER 2
+#define GREEN 3
+
+#endif /* INC_FSM_NORMAL_H_ */

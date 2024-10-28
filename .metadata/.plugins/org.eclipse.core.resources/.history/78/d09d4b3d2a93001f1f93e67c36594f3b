@@ -1,0 +1,19 @@
+/*
+ * timer.c
+ *
+ *  Created on: Oct 13, 2024
+ *      Author: datph
+ */
+//#include "main.h"
+//#include "input_reading.h"
+
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+//	if (htim->Instance == TIM2) {
+//		button_reading();
+//	}
+//}
+
+#include "timer.h"
+
+int timer1_counter = 0;
+

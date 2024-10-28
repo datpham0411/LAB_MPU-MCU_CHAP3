@@ -1,0 +1,27 @@
+/*
+ * fsm_traffic.h
+ *
+ *  Created on: Oct 26, 2024
+ *      Author: datph
+ */
+
+#ifndef INC_FSM_TRAFFIC_H_
+#define INC_FSM_TRAFFIC_H_
+
+#include "main.h"
+#include "button.h"
+
+#define INIT 			0
+#define NORMAL 			1
+#define MODIFY_RED 		2
+#define MODIFY_AMBER 	3
+#define MODIFY_GREEN 	4
+
+#define ON GPIO_PIN_RESET
+#define OFF GPIO_PIN_SET
+
+extern int status;
+
+void setCOlor
+
+#endif /* INC_FSM_TRAFFIC_H_ */

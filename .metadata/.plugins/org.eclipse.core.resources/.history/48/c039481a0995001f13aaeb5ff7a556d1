@@ -1,0 +1,16 @@
+/*
+ * traffic_light.h
+ *
+ *  Created on: Oct 28, 2024
+ *      Author: datph
+ */
+
+#ifndef INC_TRAFFIC_LIGHT_H_
+#define INC_TRAFFIC_LIGHT_H_
+
+#include "main.h"
+
+void display_num(char group, int index, int num);
+
+
+#endif /* INC_TRAFFIC_LIGHT_H_ */

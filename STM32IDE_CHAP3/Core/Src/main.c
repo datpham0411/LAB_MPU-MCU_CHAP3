@@ -22,12 +22,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "timer.h"
-#include "fsm_normal.h"
-#include "fsm_traffic.h"
-#include <button1.h>
-#include <button2.h>
-#include <button3.h>
+#include "fsm_manual.h"
+#include "button.h"
+#include "software_timer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,12 +96,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //setTimer1(100);
-  color = INIT;
-  status = NORMAL;
   while (1)
   {
-	  fsm_traffic_run();
+	  fsm_manual_run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,0 +1,21 @@
+/*
+ * global.h
+ *
+ *  Created on: Oct 28, 2024
+ *      Author: datph
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+extern int timer1_flag;
+extern int timer1_counter;
+extern int timer2_flag;
+extern int timer3_flag;
+extern int idx;
+
+extern int button1_flag;
+extern int button2_flag;
+extern int button3_flag;
+
+#endif /* INC_GLOBAL_H_ */
